@@ -1,0 +1,258 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+body {
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+}
+
+
+/* Comentario jeje*/
+.nav{
+    @extend .navbar;
+    background-color: black;
+    div{
+        @extend .container-fluid;
+        h1{
+            @extend .navbar-brand;
+            color: grey;
+            font-size: 30px;
+        }
+        ul{
+            list-style-type: none;
+
+            li{
+                @extend .active;
+                display: inline;
+                a{
+                    @extend .btn;
+                    @extend .btn-primary;
+                    background-color: black;
+                    border-color: black;
+                    color: white;
+                    font-family: 'Be Vietnam', sans-serif;
+                    font-size: 20px;
+                    width: 180px;
+                }
+
+                /*Cuando el mouse esté encima*/
+                a:hover{
+                    background-color: #1d2125;
+                    border-color: #1d2125;
+                }
+            }
+        }
+    }
+    
+}
+
+
+#body {
+    @include make-container();
+
+    #body-row {
+        @include make-row();
+    }
+
+    #solution {
+        @include make-col-ready();
+
+        @include media-breakpoint-up(md) {
+          @include make-col(4);
+        }
+
+    }
+
+    #development {
+        @include make-col-ready();
+
+        @include media-breakpoint-up(md) {
+          @include make-col(4);
+        }
+    }
+
+    #latest-news {
+        @include make-col-ready();
+
+        @include media-breakpoint-up(md) {
+          @include make-col(4);
+        }
+    }
+}
+
+
+.carta1 {
+    @include make-col-ready();
+
+
+    @include media-breakpoint-up(md) {
+      @include make-col(4);
+    }
+
+    @extend .align-self-center;
+    @extend .card;
+
+    align-self: center;
+    background-color: rgb(233, 233, 233);
+    border-color: rgb(48, 50, 131);
+
+    div{
+        @extend .card-body;
+        h5{
+            @extend .card-title;
+        }
+    
+        p{
+            @extend .card-text;
+        }
+    
+        a{
+            @extend .btn;
+            @extend .btn-primary;
+            background-color: rgb(64, 86, 158);
+            border-color: rgb(64, 86, 158);
+        }
+    }
+
+    img{
+        @extend .card-img-top;
+        height: 275px;
+    }
+
+
+}
+
+
+.carta2 {
+    @extend .d-flex;
+    @extend .justify-content-center;
+    @extend .card-body;
+    border-color: rgb(48, 50, 131);
+    h5{
+        @extend .card-title;
+    }
+    p{
+        @extend .card-text;
+    }
+}
+
+
+.carta3 {
+    @include make-col-ready();
+
+
+    @include media-breakpoint-up(md) {
+      @include make-col(3);
+    }
+
+    @extend .align-self-center;
+    @extend .card;
+
+    align-self: center;
+    background-color: rgb(233, 233, 233);
+    border-color: rgb(48, 50, 131);
+
+    div{
+        @extend .card-body;
+        h5{
+            @extend .card-title;
+        }
+    
+        p{
+            @extend .card-text;
+        }
+    
+        a{
+            @extend .btn;
+            @extend .btn-primary;
+            background-color: rgb(64, 86, 158);
+            border-color: rgb(64, 86, 158);
+        }
+    }
+
+    img{
+        @extend .card-img-top;
+        height: 200px;
+    }
+}
+
+
+.carta4 {
+    @include make-col-ready();
+
+
+    @include media-breakpoint-up(md) {
+      @include make-col(6);
+    }
+
+    @extend .align-self-center;
+    @extend .card;
+
+    align-self: center;
+    background-color: rgb(233, 233, 233);
+    border-color: rgb(48, 50, 131);
+
+    div{
+        @extend .card-body;
+        h5{
+            @extend .card-title;
+        }
+    
+        p{
+            @extend .card-text;
+        }
+    
+        a{
+            @extend .btn;
+            @extend .btn-primary;
+            background-color: rgb(64, 86, 158);
+            border-color: rgb(64, 86, 158);
+        }
+    }
+
+    img{
+        @extend .card-img-top;
+        height: 300px;
+    }
+}
+
+
+.lista{
+    ul{
+        @extend .list-group;
+        @extend .list-group-flush;
+        li{
+            @extend .list-group-item;
+        }
+    }
+}
+
+
+.carta-contacto{
+    @extend .card;
+    @extend .card-body;
+    
+    h5{
+        @extend .card-title;
+        color: darkgreen;
+    }
+
+    ul{
+        @extend .list-group;
+        @extend .list-group-flush;
+        li{
+            @extend .list-group-item;
+        }
+    }
+}
+
+
+
+.nube {
+    background-color: white;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+}
